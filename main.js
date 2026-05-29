@@ -346,12 +346,12 @@ class EventPlannerModal extends Modal {
 
             // Construct Markdown (No ID generation anymore)
             let textBlock = `- [ ] ${title}\n`;
-            textBlock += `\t- Date: ${finalDateStr}\n`;
-            if (finalTimeStr) textBlock += `\t- Time: ${finalTimeStr}\n`;
-            if (finalAlarmStr) textBlock += `\t- Alarm: ${finalAlarmStr}\n`;
-            if (icon) textBlock += `\t- Icon: ${icon}\n`;
-            if (tagsString) textBlock += `\t- Tag: ${tagsString}\n`;
-            if (repeatVal !== 'none') textBlock += `\t- Repeat: ${repeatVal}\n`;
+            textBlock += `\t- Date ${finalDateStr}\n`;
+            if (finalTimeStr) textBlock += `\t- Time ${finalTimeStr}\n`;
+            if (finalAlarmStr) textBlock += `\t- Alarm ${finalAlarmStr}\n`;
+            if (icon) textBlock += `\t- Icon ${icon}\n`;
+            if (tagsString) textBlock += `\t- Tag ${tagsString}\n`;
+            if (repeatVal !== 'none') textBlock += `\t- Repeat ${repeatVal}\n`;
             if (description) {
                 textBlock += `\t>[!NOTE]\n`;
                 description.split('\n').forEach(l => { textBlock += `\t> ${l}\n`; });
@@ -374,3 +374,4 @@ class EventPlannerModal extends Modal {
 }
 
 module.exports = CEventPlannerExtraPlugin;
+/* nosourcemap */
